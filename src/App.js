@@ -112,7 +112,7 @@ class App extends Component {
     //   .predict(
     //     Clarifai.FACE_DETECT_MODEL,
     //     this.state.input)
-    fetch('http://localhost:3000/imageurl', {
+    fetch('https://smart-brain-714.herokuapp.com/imageurl', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -123,7 +123,7 @@ class App extends Component {
       .then(response => {
         console.log('hi', response)
         if (response) {
-          fetch('http://localhost:3000/image', {
+          fetch('https://smart-brain-714.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
